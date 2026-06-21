@@ -7,8 +7,11 @@ results/*.xml linguist-generated=true
 # Ignore bat scripts
 *.bat linguist-vendored=true
 
-# Classify Robot Framework files correctly
-*.robot linguist-language=RobotFramework linguist-detectable=true
+# Ignore Python POM/test files so Robot Framework is the primary language shown
+tests/pom/**/*.py linguist-vendored=true
+tests/selenium/*.py linguist-vendored=true
+tests/test_register_automation.py linguist-vendored=true
+conftest.py linguist-vendored=true
 
-# Classify Python files
-*.py linguist-language=Python linguist-detectable=true
+# Classify Robot Framework files correctly - make them detectable and dominant
+*.robot linguist-language=RobotFramework linguist-detectable=true linguist-vendored=false
