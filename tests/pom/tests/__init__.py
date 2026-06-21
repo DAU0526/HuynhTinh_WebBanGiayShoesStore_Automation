@@ -1,0 +1,3 @@
+"""
+Package init — POM Tests
+"""
