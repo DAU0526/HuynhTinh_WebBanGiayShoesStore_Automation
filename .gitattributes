@@ -1,0 +1,14 @@
+# Tell GitHub Linguist to ignore generated/vendored files for language detection
+
+# Ignore HTML test reports (Robot Framework / pytest generated output)
+results/*.html linguist-generated=true
+results/*.xml linguist-generated=true
+
+# Ignore bat scripts
+*.bat linguist-vendored=true
+
+# Classify Robot Framework files correctly
+*.robot linguist-language=RobotFramework linguist-detectable=true
+
+# Classify Python files
+*.py linguist-language=Python linguist-detectable=true
